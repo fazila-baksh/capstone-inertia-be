@@ -4,6 +4,25 @@ const knex = initKnex(configuration);
 import express from "express";
 const router = express.Router();
 
+router.post("/add", async (req, res) => {
+  try {
+    const { habit_name, description, goal_frequency } = req.body;
+
+    const newHabit = await knex("habits")
+      .insert({
+        habit_name,
+        description,
+        goal_frequency,
+      })
+      .returning("*");
+
+    res.status(201).json(newHabit[0]);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Error creating habit" });
+  }
+});
+
 router.get("/:userId", async (req, res) => {
   try {
     const userId = req.params.userId;
@@ -79,7 +98,11 @@ router.get("/:userId/habits/:habitId", async (req, res) => {
     const habitId = req.params.habitId;
     const habit = await knex("habits")
       .where({ habit_id: habitId, user_id: userId })
-      .select("habits.habit_name", "habits.description");
+      .select(
+        "habits.habit_name",
+        "habits.description",
+        "habits.goal_frequency"
+      );
 
     if (!habit) {
       return res.status(404).send("Habit not found");
