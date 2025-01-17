@@ -2,6 +2,7 @@ import initKnex from "knex";
 import configuration from "../knexfile.js";
 const knex = initKnex(configuration);
 import express from "express";
+import axios from "axios";
 const router = express.Router();
 
 router.post("/add", async (req, res) => {
@@ -20,6 +21,16 @@ router.post("/add", async (req, res) => {
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Error creating habit" });
+  }
+});
+
+router.get("/:userId/api/affirmations", async (req, res) => {
+  try {
+    const response = await axios.get("https://www.affirmations.dev");
+    res.json({ affirmation: response.data.affirmation });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Failed to fetch affirmation" });
   }
 });
 
@@ -61,7 +72,7 @@ router.get("/:userId/habits/weekly", async (req, res) => {
     const userId = req.params.userId;
 
     // Code to get the start and end of the week
-    const curr = new Date("2025-01-07T01:49:11.335Z"); // get current date
+    const curr = new Date("2025-01-06T01:49:11.335Z"); // get current date
     const first = curr.getDate() - curr.getDay(); // first day = day of month - day of week
     const last = first + 6;
     const startOfWeek = new Date(curr.setDate(first)).toLocaleDateString(
