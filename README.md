@@ -34,7 +34,9 @@ How will they use it?
 - React
 - Express
 - React-router
+- React-router-dom
 - Axios
+- Chart.js
 - MySQL Database
 - Knex
 - CORS
@@ -46,30 +48,28 @@ Daily affirmations API (https://www.affirmations.dev/)
 ### Sitemap
 
 Home Page:
-
-- a daily affrimations banner
-- overview of all habits
-- ability to add new habits
-- a rate your day section, where users can click the emoji that best describes their day and write one sentence sumarizing their day
+- A daily affirmations banner
+- Overview of all habits
+- Ability to add new habits
+- A "Rate your day" section, where users can click the emoji that best describes their day and write one sentence summarizing their day.
 
 Individual Habit Page:
-
-- the description of the habit and the users weekly goal of the habit ( "x" times a week)
-- ability to edit the habit
-- ability to delete the habit
-- a graph showing the yearly progress of that habit
+- The description of the habit and the user's weekly goal for the habit ("x" times a week)
+- Ability to edit the habit
+- Ability to delete the habit
+- A graph showing the yearly progress of that habit
 
 Weekly Habit Page:
 
-- overview of all habits and the progress for that week
+- Overview of all habits and the progress for that week
 
 Add Page:
 
-- add a new habit for tracking
+- Add a new habit for tracking
 
 Edit Page:
 
-- edit a specific habit to make it more specific/aligned with personal goals
+- Edit a specific habit to make it more specific/aligned with personal goals
 
 ### Endpoints
 
@@ -251,5 +251,3 @@ Edit Page:
 - Journal: include a way for users to write daily journal entires
 
 - Historical data: users have the abilitity to access weekly data from past weeks and not only the current week
-
-- Reminder Notifications: notifications to encourage and motivate users to log their habit progress daily and weekly
