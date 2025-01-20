@@ -71,10 +71,6 @@ Edit Page:
 
 - edit a specific habit to make it more specific/aligned with personal goals
 
-### Mockups
-
-![](/public/inertia.jpg)
-
 ### Endpoints
 
 ## Get Endpoints
