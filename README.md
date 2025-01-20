@@ -136,25 +136,25 @@ Edit Page:
 ```
 [
     {
-    "habit_id": 1,
-    "habit_name": "exercise",
-    "description": "1 hour workout 4 times a week",
-    "goal_frequency": 4,
-    "graphYValues": [
-        11,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ]
-},
+        "habit_id": 1,
+        "habit_name": "exercise",
+        "description": "1 hour workout 4 times a week",
+        "goal_frequency": 4,
+        "graphYValues": [
+            11,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    },
 ...
 ]
 ```
