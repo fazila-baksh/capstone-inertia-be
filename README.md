@@ -246,7 +246,7 @@ Edit Page:
 
 - Authentication: user registration and login
 
-- Rate your day: Currently the rate your day function is only stored in the database. I would like to add a component on the weekly page that shows all the entries for that week
+- Rate your day: Currently the rate your day function is only stored in the database. Add a component on the weekly page that shows all the entries for that week
 
 - Journal: include a way for users to write daily journal entires
 
